@@ -15,3 +15,19 @@ Point cloud segmentation algorithem is inspired by the paper:
 - Numpy 1.23.3 
 - open3d 0.15.1
 - matplotlib 3.6.0
+
+##Pipeline
+### Point Clustering
+- Preprocessing(PCD downsample and outerliner removing etc.)
+- Ground removal (RanSac)
+- clustering
+### Semantic Segmentation
+### Object Detection
+
+## Quick Start
+### Available Point Cloud Segmentation Algorithem
+- Fast Range
+- DbSCAN
+
+
+
