@@ -13,16 +13,21 @@ Point cloud segmentation algorithem is inspired by the paper:
 - Python 3.9.13
 - PyTorch 1.10.2
 - Numpy 1.23.3 
-- open3d 0.15.1
-- matplotlib 3.6.0
+- Open3d 0.15.1
+- Matplotlib 3.6.0
 
 ## Pipeline
 ### 1.Point Clustering
 - Preprocessing(PCD downsample and outerliner removing etc.)
 - Ground removal (RanSac)
-- clustering
+- Clustering
 
-[![clustering illustration](doc/pics/depth)]
+The goals for this step are:
+1.Transform the point cloud file form. The point cloud files in KITTI are changed from .bin to .npy range image or changing .pcd file to .npy range image.
+2.Preprocessing.
+
+#### The first step result
+![clustering illustration](doc/point_clustering.jpg)
 
 ### 2.Semantic Segmentation
 ### 3.Object Detection
