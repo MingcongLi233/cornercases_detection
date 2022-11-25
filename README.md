@@ -16,7 +16,7 @@ Point cloud segmentation algorithem is inspired by the paper:
 - open3d 0.15.1
 - matplotlib 3.6.0
 
-##Pipeline
+## Pipeline
 ### Point Clustering
 - Preprocessing(PCD downsample and outerliner removing etc.)
 - Ground removal (RanSac)
