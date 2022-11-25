@@ -17,12 +17,12 @@ Point cloud segmentation algorithem is inspired by the paper:
 - matplotlib 3.6.0
 
 ## Pipeline
-### Point Clustering
+### 1.Point Clustering
 - Preprocessing(PCD downsample and outerliner removing etc.)
 - Ground removal (RanSac)
 - clustering
-### Semantic Segmentation
-### Object Detection
+### 2.Semantic Segmentation
+### 3.Object Detection
 
 ## Quick Start
 ### Available Point Cloud Segmentation Algorithem
