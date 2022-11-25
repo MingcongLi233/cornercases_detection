@@ -21,6 +21,9 @@ Point cloud segmentation algorithem is inspired by the paper:
 - Preprocessing(PCD downsample and outerliner removing etc.)
 - Ground removal (RanSac)
 - clustering
+
+[![clustering illustration](doc/pics/depth)]
+
 ### 2.Semantic Segmentation
 ### 3.Object Detection
 
