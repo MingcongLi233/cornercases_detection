@@ -23,7 +23,9 @@ Point cloud segmentation algorithem is inspired by the paper:
 - Clustering
 
 The goals for this step are:
+
 1.Transform the point cloud file form. The point cloud files in KITTI are changed from .bin to .npy range image or changing .pcd file to .npy range image.
+
 2.Preprocessing.
 
 #### The first step result
