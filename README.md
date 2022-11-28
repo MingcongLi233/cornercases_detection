@@ -22,28 +22,40 @@ Point cloud segmentation algorithem is inspired by the paper:
 
 The goals for this step are:
 
-1.Transform the point cloud file form. The point cloud files in KITTI are changed from .bin into .npy range image or changing .pcd file into .npy range image.
+1.Transform the point cloud file form. The point cloud files in KITTI are changed from .bin into .npy range image or changing .pcd file into .npy range image
 
-2.Downsampling and outliner points removal.To reduce the computation consumption, the point cloud was downsampled; the outliner points were deleted to increase the performance of the clustering algorithm.
+2.Downsampling and outliner points removal.To reduce the computation consumption, the point cloud was downsampled; the outliner points were deleted to increase the performance of the clustering algorithm
 
 **- Ground removal**
 
-To reduce the disturbance of ground points on clustering, a function based on Ransac was applied to the points cloud.
+To reduce the disturbance of ground points on clustering, a function based on Ransac was applied to the points cloud
 
 **- Clustering**
 
+Applied a fast or DbSCAN method that segments 3D range data into different objects
 
-
-#### The first step result
+#### The clustering result
 ![clustering illustration](doc/point_clustering.jpg)
 
-### 2.Semantic Segmentation
-### 3.Object Detection
+### 2.Semantic Segmentation ([link](https://github.com/VainF/DeepLabV3Plus-Pytorch))
+### 3.Object Detection ([link](https://github.com/zhaoweicai/cascade-rcnn))
 
 ## Quick Start
 ### Available Point Cloud Segmentation Algorithem
 - Fast Range
 - DbSCAN
+
+### 1.Install
+```
+pip install open3d
+```
+
+### 2.Clustering
+Example:
+```
+python main.py --clustering_method dbscan --iters 100
+```
+You can run the clustering methode with your own points cloud files. The defaut path is '.\input\dataset':
 
 
 
