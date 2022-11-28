@@ -24,7 +24,7 @@ The goals for this step are:
 
 1.Transform the point cloud file form. The point cloud files in KITTI are changed from .bin into .npy range image or changing .pcd file into .npy range image.
 
-2.Downsample and outliner point removal.To reduce the computation consumption, the point cloud was downsampled; the outliner points were deleted to increase the performance of the clustering algorithm.
+2.Downsampling and outliner points removal.To reduce the computation consumption, the point cloud was downsampled; the outliner points were deleted to increase the performance of the clustering algorithm.
 
 **- Ground removal**
 
