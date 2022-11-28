@@ -18,7 +18,7 @@ Point cloud segmentation algorithem is inspired by the paper:
 
 ## Pipeline
 ### 1.Point Clustering
-- Preprocessing
+**- Preprocessing**
 
 The goals for this step are:
 
@@ -26,11 +26,11 @@ The goals for this step are:
 
 2.Downsample and outliner point removal.To reduce the computation consumption, the point cloud was downsampled; the outliner points were deleted to increase the performance of the clustering algorithm.
 
-- Ground removal
+**- Ground removal**
 
 To reduce the disturbance of ground points on clustering, a function based on Ransac was applied to the points cloud.
 
-- Clustering
+**- Clustering**
 
 
 
