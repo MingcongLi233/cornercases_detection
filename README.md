@@ -18,15 +18,21 @@ Point cloud segmentation algorithem is inspired by the paper:
 
 ## Pipeline
 ### 1.Point Clustering
-- Preprocessing(PCD downsample and outerliner removing etc.)
-- Ground removal (RanSac)
-- Clustering
+- Preprocessing
 
 The goals for this step are:
 
-1.Transform the point cloud file form. The point cloud files in KITTI are changed from .bin to .npy range image or changing .pcd file to .npy range image.
+1.Transform the point cloud file form. The point cloud files in KITTI are changed from .bin into .npy range image or changing .pcd file into .npy range image.
 
-2.Preprocessing.
+2.Downsample and outliner point removal.To reduce the computation consumption, the point cloud was downsampled; the outliner points were deleted to increase the performance of the clustering algorithm.
+
+- Ground removal
+
+To reduce the disturbance of ground points on clustering, a function based on Ransac was applied to the points cloud.
+
+- Clustering
+
+
 
 #### The first step result
 ![clustering illustration](doc/point_clustering.jpg)
