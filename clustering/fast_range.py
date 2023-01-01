@@ -7,11 +7,12 @@ from .pcd2range import pcd2range
 import math
 import open3d
 import datetime
+import cv2
 
 
 
 def fast_range_clustering (npy_file, width, height, init_angle, change_rate, 
-horizontaltheta, horizontalangle, verticaltheta, verticalangle,vis):
+horizontaltheta, horizontalangle, verticaltheta, verticalangle,vis,path):
     """
     Unsupervised point-cloud clustering and show the result
     """
@@ -71,13 +72,21 @@ horizontaltheta, horizontalangle, verticaltheta, verticalangle,vis):
 
                 ent_deter += 1
 
-
+    image_2d = np.where(SegResult == -1, 0, SegResult)
+    image_2d = (image_2d/image_2d.max())*255
+    image_2d = image_2d.astype(np.int8)
+    # SegResult = cv2.cvtColor(SegResult, cv2.COLOR_GRAY2BGR)
 
     pcd = open3d.geometry.PointCloud()
     pcd.points = open3d.utility.Vector3dVector(ent_q)
     pcd.colors = open3d.utility.Vector3dVector(ent_color)
     if vis==True:
         image=custom_draw_geometry_with_custom(pcd)
+
+        photo = cv2.imread(path)
+        image_2d = cv2.resize(image_2d,(width,height))
+        result = cv2.addWeighted(photo, 0.7, image_2d, 0.3, 0)
+        cv2.imshow(result)
         # return image
 
 

@@ -11,7 +11,8 @@ if __name__ == "__main__":
     # parser
     parser = argparse.ArgumentParser()
     #main
-    parser.add_argument('--lid_path', type=str, default=".\input\dataset\kitti.bin")  
+    parser.add_argument('--lid_path', type=str, default=".\input\dataset\kitti.bin")
+    parser.add_argument('--img_path', type=str, default=".\input\dataset\kitti.png")  
     parser.add_argument('--clustering_method', type=str, default='dbscan')
 
     #preprocessing
@@ -55,7 +56,7 @@ if __name__ == "__main__":
         fast_range_clustering(
         seg_cloud, args.width, args.height, args.init_angle, args.change_rate,
         args.horizontaltheta, args.horizontalangle, args.verticaltheta, 
-        args.verticalangle, args.vis
+        args.verticalangle, args.vis, args.img_path
         )
         # func(seg_cloud, vis=True, save_fig=True, )
     elif args.clustering_method == 'dbscan':
